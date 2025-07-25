@@ -596,6 +596,12 @@ h3 {
   outline: none;
 }
 
+.logo-home{
+	padding-left: 60px;
+	padding-top: 20px;
+}
+
+
 /* line 105, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_btn.scss */
 .boxed-btn6 {
   color: #fff;
