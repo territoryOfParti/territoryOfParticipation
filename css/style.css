@@ -596,11 +596,6 @@ h3 {
   outline: none;
 }
 
-.logo-home{
-	padding-left: 60px;
-	padding-top: 20px;
-}
-
 
 /* line 105, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_btn.scss */
 .boxed-btn6 {
@@ -1832,6 +1827,79 @@ h3 {
 .features_room .rooms_here .single_rooms .room_thumb {
   position: relative;
   overflow: hidden;
+}
+
+.logo-home{
+	padding-left: 60px;
+	padding-top: 20px;
+	flex: 0 0 auto;
+}
+
+.logo-home img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.logo-slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.logo-slider-track-postive {
+    display: flex;
+    width: max-content;
+    animation: slide_positive 200s linear infinite;
+	animation-play-state: running;
+}
+
+.logo-slider-track-postive:hover,
+.logo-slider-track-postive:focus-within {
+  animation-play-state: paused;
+}
+
+.logo-slider-track-negative {
+    display: flex;
+    width: max-content;
+    animation: slide_negative 50s linear infinite;
+	animation-play-state: running;
+}
+
+.logo-slider-track-negative:hover,
+.logo-slider-track-negative:focus-within {
+  animation-play-state: paused;
+}
+
+@keyframes slide_positive {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+@keyframes slide_negative {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(100%);
+	}
+}
+
+
+.logos-slide-pos {
+	overflow: hidden;
+	white-space: nowrap;
+	animation: 50s slide_positive infinite linear;
+}
+
+.logos-slide-neg {
+	overflow: hidden;
+	white-space: nowrap;
+	animation: 50s slide_negative infinite linear;
 }
 
 /* line 170, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_offers.scss */
@@ -3378,10 +3446,12 @@ h3 {
 
 /* line 17, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_voolenteer.scss */
 .our_volunteer_area .single_volenteer .volenteer_thumb img {
-  width: 100%;
+  width: 300px;
+  height: 400px;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
+  object-fit: contain;
 }
 
 /* line 22, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_voolenteer.scss */
