@@ -428,8 +428,8 @@ h3 {
 
 /* line 298, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_theme-default.scss */
 .section_padding {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 @media (max-width: 767px) {
@@ -1830,13 +1830,13 @@ h3 {
 }
 
 .logo-home{
-	padding-left: 60px;
-	padding-top: 20px;
+	padding-left: 30px;
+	padding-top: 0px;
 	flex: 0 0 auto;
 }
 
 .logo-home img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     display: block;
 }
@@ -2262,8 +2262,8 @@ h3 {
 
 /* line 9, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_footer.scss */
 .footer .footer_top {
-  padding-top: 130px;
-  padding-bottom: 110px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 @media (max-width: 767px) {
@@ -3104,8 +3104,8 @@ h3 {
 /* line 45, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_latest_activites.scss */
 .latest_activites_area .activites_info {
   padding-right: 156px;
-  padding-top: 240px;
-  padding-bottom: 226px;
+  padding-top: 120px;
+  padding-bottom: 126px;
 }
 
 @media (max-width: 767px) {
