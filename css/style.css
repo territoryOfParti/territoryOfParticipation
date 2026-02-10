@@ -3041,7 +3041,7 @@ h3 {
   background-image: url(../img/banner/About.png);
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
 }
 
 /* line 7, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_latest_activites.scss */
@@ -3103,9 +3103,9 @@ h3 {
 
 /* line 45, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_latest_activites.scss */
 .latest_activites_area .activites_info {
-  padding-right: 156px;
-  padding-top: 120px;
-  padding-bottom: 126px;
+  padding-right: 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 @media (max-width: 767px) {
