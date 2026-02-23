@@ -785,8 +785,11 @@ h3 {
 /* line 242, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_btn.scss */
 .read_more {
   font-size: 16px;
-  color: #BCBDBF;
+  color: #1a73e8;
+  text-decoration: underline;
+  text-underline-offset: 2px;
   text-transform: capitalize;
+  font-weight: 500;
   position: relative;
   display: inline-block;
   padding-left: 68px;
@@ -813,7 +816,8 @@ h3 {
 
 /* line 260, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_btn.scss */
 .read_more:hover {
-  color: #1C7D84;
+  color: #1558b0;
+  text-decoration-thickness: 2px;
 }
 
 /* line 262, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_btn.scss */
@@ -1486,7 +1490,7 @@ h3 {
 /* line 8, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_slider.scss */
 .slider_area .single_slider {
   height: 742px;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -2912,6 +2916,49 @@ h3 {
   position: relative;
 }
 
+
+.events-marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  /* Optional: add top/bottom padding/margins to taste */
+  padding: 60px 0;
+}
+
+/* Track: inline flex row that will be translated */
+.events-track {
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+  will-change: transform;
+  animation: marquee-slide 30s linear infinite;
+}
+
+/* Pause on hover/focus within (optional) */
+.events-marquee:hover .events-track,
+.events-marquee:focus-within .events-track {
+  animation-play-state: paused;
+}
+
+
+* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .events-track {
+    animation: none;
+    transform: translateX(0);
+  }
+}
+
+/* Keyframes: move one full set width to the left.
+   Because we duplicated the set, when -50% is reached,
+   it visually loops seamlessly. */
+@keyframes marquee-slide {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-150%); }
+}
+
+
+
 @media (max-width: 767px) {
   /* line 2, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_reason.scss */
   .reson_area .single_reson {
@@ -2968,8 +3015,10 @@ h3 {
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  padding: 47px 40px 33px 40px;
-  left: 46px;
+  padding: 10px 10px 10px 10px;
+  left: 135px;
+  height: 220px;
+  overflow: hidden;
 }
 
 /* line 34, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_reason.scss */
@@ -2985,18 +3034,22 @@ h3 {
 
 /* line 38, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_reason.scss */
 .reson_area .single_reson .help_content p {
-  margin-top: 21px;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 1.30;
 }
 
 /* line 42, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_reason.scss */
 .reson_area .single_reson .help_content .read_more {
   font-size: 16px;
-  color: #BCBDBF;
+  color: #1a73e8;
   text-transform: capitalize;
+  text-decoration: underline;
   position: relative;
-  display: inline-block;
-  padding-left: 68px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  padding-left: 45px;
 }
 
 /* line 49, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_reason.scss */
@@ -3933,7 +3986,7 @@ sup,
 sub,
 u,
 del {
-  color: #ff5e13;
+  color: #000000;
 }
 
 /* line 93, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_elements.scss */
