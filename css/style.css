@@ -928,6 +928,109 @@ h3 {
   }
 }
 
+
+
+
+ 
+
+/* ==== Locked colors from your brand ======================================= */
+:root{
+  --brand-primary: #1C7E84;   /* main teal */
+  --brand-primary-alt: #1C7D84;/* slightly deeper teal for accents */
+  --text-dark: #1A1A1A;
+  --text-light: #FFFFFF;
+
+  /* Derived tints from your teal (keeps it “on-brand” but brighter) */
+  --tint-strong: #D6EFF1;     /* brighter, more pronounced */
+  --tint-soft:   #E9F6F7;     /* softer variant for the second card */
+
+  --card-radius: 14px;
+  --card-shadow: 0 6px 20px rgba(0,0,0,.10);
+}
+
+/* ==== Section wrapper ====================================================== */
+.mv-section{
+  max-width: 900px;
+  margin: clamp(40px, 4vw, 80px) auto;
+  padding: 0 20px;
+}
+
+/* SR-only heading for accessibility */
+.visually-hidden{
+  position:absolute!important; height:1px; width:1px; overflow:hidden;
+  clip:rect(1px,1px,1px,1px); white-space:nowrap;
+}
+
+/* ==== Quote cards (vertical accent) ======================================= */
+.quote-card{
+  position: relative;
+  border-radius: var(--card-radius);
+  padding: 32px 32px 32px 64px;    /* extra left space for bar */
+  margin-bottom: 32px;
+  box-shadow: var(--card-shadow);
+  background: #fff;
+}
+
+/* Vertical brand bar on the left */
+.quote-card::before{
+  content:"";
+  position:absolute; left:0; top:0; bottom:0;
+  width:10px;
+  background: linear-gradient(180deg, var(--brand-primary) 0%, var(--brand-primary-alt) 100%);
+  border-top-left-radius: var(--card-radius);
+  border-bottom-left-radius: var(--card-radius);
+}
+
+/* Titles and text */
+.quote-title{
+  font-weight: 800;
+  font-size: 1.12rem;
+  margin: 0 0 10px 0;
+  color: var(--brand-primary);
+  letter-spacing: .2px;
+}
+
+.quote-text{
+  margin:0;
+  font-size: 1.18rem;
+  line-height: 1.65;
+  color: var(--text-dark);
+}
+
+/* ===== Mission: stronger tint, watermark quote ============================ */
+.mission-card{
+  background: var(--tint-strong);
+}
+
+/* Oversized decorative quote (top-right) */
+.mission-card::after{
+  content:"“";
+  position:absolute; right:18px; top:-12px;
+  font-size:128px; line-height:1;
+  color: var(--brand-primary);
+  opacity:.09; pointer-events:none;
+}
+
+/* ===== Vision: softer tint, inline quote mark ============================= */
+.vision-card{
+  background: var(--tint-soft);
+}
+
+.vision-card .quote-title::before{
+  content:"“ ";
+  color: var(--brand-primary);
+  opacity:.8;
+}
+
+/* ===== Responsive ========================================================== */
+@media (max-width: 600px){
+  .quote-card{ padding: 28px 24px 28px 56px; }
+  .quote-text{ font-size: 1.08rem; }
+}
+
+
+
+
 /* line 13, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_slick-nav.scss */
 .slicknav_menu .slicknav_nav {
   background: #fff;
