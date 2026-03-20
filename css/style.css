@@ -949,10 +949,13 @@ h3 {
 }
 
 /* ==== Section wrapper ====================================================== */
-.mv-section{
-  max-width: 900px;
-  margin: clamp(40px, 4vw, 80px) auto;
-  padding: 0 20px;
+.mv-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin: 60px 0;
+  padding-left: 40px;   /* Added padding on left */
+  padding-right: 40px;  /* Added padding on right */
 }
 
 /* SR-only heading for accessibility */
@@ -962,13 +965,14 @@ h3 {
 }
 
 /* ==== Quote cards (vertical accent) ======================================= */
-.quote-card{
+.quote-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
   position: relative;
-  border-radius: var(--card-radius);
-  padding: 32px 32px 32px 64px;    /* extra left space for bar */
-  margin-bottom: 32px;
-  box-shadow: var(--card-shadow);
-  background: #fff;
+  overflow: hidden;
 }
 
 /* Vertical brand bar on the left */
@@ -981,43 +985,35 @@ h3 {
   border-bottom-left-radius: var(--card-radius);
 }
 
-/* Titles and text */
-.quote-title{
-  font-weight: 800;
-  font-size: 1.12rem;
-  margin: 0 0 10px 0;
-  color: var(--brand-primary);
-  letter-spacing: .2px;
+.quote-card:hover {
+  transform: translateY(-6px);
 }
 
-.quote-text{
-  margin:0;
-  font-size: 1.18rem;
-  line-height: 1.65;
-  color: var(--text-dark);
+/* Titles and text */
+.quote-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2f7f7f;
+  margin-bottom: 12px;
+}
+
+.quote-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
 }
 
 /* ===== Mission: stronger tint, watermark quote ============================ */
-.mission-card{
-  background: var(--tint-strong);
-}
-
-/* Oversized decorative quote (top-right) */
-.mission-card::after{
-  content:"“";
-  position:absolute; right:18px; top:-12px;
-  font-size:128px; line-height:1;
-  color: var(--brand-primary);
-  opacity:.09; pointer-events:none;
+.mission-card {
+  border-top: 4px solid #2f7f7f;
 }
 
 /* ===== Vision: softer tint, inline quote mark ============================= */
-.vision-card{
-  background: var(--tint-soft);
+.vision-card {
+  border-top: 4px solid #6bb3b3;
 }
 
 .vision-card .quote-title::before{
-  content:"“ ";
   color: var(--brand-primary);
   opacity:.8;
 }
@@ -1937,8 +1933,8 @@ h3 {
 }
 
 .logo-home{
-	width: 120px;   /* same width for all */
-    height: 80px;  /* same height for all */
+	width: 150px;   /* same width for all */
+    height: 100px;  /* same height for all */
 	padding-left: 30px;
 	justify-content: center;
 	display: flex;
