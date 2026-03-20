@@ -1937,15 +1937,20 @@ h3 {
 }
 
 .logo-home{
+	width: 120px;   /* same width for all */
+    height: 80px;  /* same height for all */
 	padding-left: 30px;
+	justify-content: center;
+	display: flex;
+	align-items: center;
 	padding-top: 0px;
 	flex: 0 0 auto;
 }
 
 .logo-home img {
-    max-width: 80%;
-    height: auto;
-    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 .logo-slider-wrapper {
